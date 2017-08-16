@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `PandocOption` enum in crate `pandoc`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, PandocOption">
+
+    <title>pandoc::PandocOption - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc enum">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Enum PandocOption</p><div class="block items"><ul><li><a href="#variants">Variants</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='index.html'>pandoc</a></p><script>window.sidebarCurrent = {name: 'PandocOption', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Enum <a href='index.html'>pandoc</a>::<wbr><a class="enum" href=''>PandocOption</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/pandoc/lib.rs.html#82-235' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum PandocOption {
+    DataDir(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>),
+    Strict,
+    ParseRaw,
+    Smart,
+    OldDashes,
+    BaseHeaderLevel(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>),
+    IndentedCodeClasses(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>),
+    Filter(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>),
+    Normalize,
+    PreserveTabs,
+    TabStop(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>),
+    TrackChanges(<a class="enum" href="../pandoc/enum.TrackChanges.html" title="enum pandoc::TrackChanges">TrackChanges</a>),
+    ExtractMedia(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>),
+    Standalone,
+    Template(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>),
+    Meta(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>,&nbsp;<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>&gt;),
+    Var(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>,&nbsp;<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>&gt;),
+    PrintDefaultTemplate(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>),
+    PrintDefaultDataFile(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>),
+    NoWrap,
+    Columns(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>),
+    TableOfContents,
+    TableOfContentsDepth(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>),
+    NoHighlight,
+    HighlightStyle(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>),
+    IncludeInHeader(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>),
+    IncludeBeforeBody(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>),
+    IncludeAfterBody(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>),
+    SelfContained,
+    Offline,
+    Html5,
+    HtmlQTags,
+    Ascii,
+    ReferenceLinks,
+    AtxHeaders,
+    TopLevelDivision(<a class="enum" href="../pandoc/enum.Tld.html" title="enum pandoc::Tld">Tld</a>),
+    NumberSections,
+    NumberOffset(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html" title="struct collections::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>&gt;),
+    NoTexLigatures,
+    Listings,
+    Incremental,
+    SlideLevel(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>),
+    SectionDivs,
+    DefaultImageExtension(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>),
+    EmailObfuscation(<a class="enum" href="../pandoc/enum.EmailObfuscation.html" title="enum pandoc::EmailObfuscation">EmailObfuscation</a>),
+    IdPrefix(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>),
+    TitlePrefix(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>),
+    Css(<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>),
+    ReferenceOdt(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>),
+    ReferenceDocx(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>),
+    EpubStylesheet(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>),
+    EpubCoverImage(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>),
+    EpubMetadata(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>),
+    EpubEmbedFont(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>),
+    EpubChapterLevel(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>),
+    LatexEngine(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>),
+    LatexEngineOpt(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>),
+    Bibliography(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>),
+    Csl(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>),
+    CitationAbbreviations(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>),
+    Natbib,
+    Biblatex,
+    LatexMathML(<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>&gt;),
+    AsciiMathML(<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>&gt;),
+    MathML(<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>&gt;),
+    MimeTex(<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>&gt;),
+    WebTex(<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>&gt;),
+    JsMath(<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>&gt;),
+    MathJax(<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>&gt;),
+    Katex(<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>&gt;),
+    KatexStylesheet(<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>),
+    GladTex,
+    Trace,
+    DumpArgs,
+    IgnoreArgs,
+    Verbose,
+}</pre><h2 id='variants' class='variants'>Variants</h2>
+<span id='variant.DataDir' class='variant'><span id='DataDir.v' class='invisible'><code>DataDir(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>)</code></span></span><div class='docblock'><p>--data-dir=DIRECTORY</p>
+</div><span id='variant.Strict' class='variant'><span id='Strict.v' class='invisible'><code>Strict</code></span></span><div class='docblock'><p>--strict</p>
+</div><span id='variant.ParseRaw' class='variant'><span id='ParseRaw.v' class='invisible'><code>ParseRaw</code></span></span><div class='docblock'><p>-R --parse-raw</p>
+</div><span id='variant.Smart' class='variant'><span id='Smart.v' class='invisible'><code>Smart</code></span></span><div class='docblock'><p>-S --smart</p>
+</div><span id='variant.OldDashes' class='variant'><span id='OldDashes.v' class='invisible'><code>OldDashes</code></span></span><div class='docblock'><p>--old-dashes</p>
+</div><span id='variant.BaseHeaderLevel' class='variant'><span id='BaseHeaderLevel.v' class='invisible'><code>BaseHeaderLevel(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>)</code></span></span><div class='docblock'><p>--base-header-level=NUMBER</p>
+</div><span id='variant.IndentedCodeClasses' class='variant'><span id='IndentedCodeClasses.v' class='invisible'><code>IndentedCodeClasses(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>)</code></span></span><div class='docblock'><p>--indented-code-classes=STRING</p>
+</div><span id='variant.Filter' class='variant'><span id='Filter.v' class='invisible'><code>Filter(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>)</code></span></span><div class='docblock'><p>-F PROGRAM --filter=PROGRAM</p>
+</div><span id='variant.Normalize' class='variant'><span id='Normalize.v' class='invisible'><code>Normalize</code></span></span><div class='docblock'><p>--normalize</p>
+</div><span id='variant.PreserveTabs' class='variant'><span id='PreserveTabs.v' class='invisible'><code>PreserveTabs</code></span></span><div class='docblock'><p>-p --preserve-tabs</p>
+</div><span id='variant.TabStop' class='variant'><span id='TabStop.v' class='invisible'><code>TabStop(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>)</code></span></span><div class='docblock'><p>--tab-stop=NUMBER</p>
+</div><span id='variant.TrackChanges' class='variant'><span id='TrackChanges.v' class='invisible'><code>TrackChanges(<a class="enum" href="../pandoc/enum.TrackChanges.html" title="enum pandoc::TrackChanges">TrackChanges</a>)</code></span></span><div class='docblock'><p>--track-changes=accept|reject|all</p>
+</div><span id='variant.ExtractMedia' class='variant'><span id='ExtractMedia.v' class='invisible'><code>ExtractMedia(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>)</code></span></span><div class='docblock'><p>--extract-media=PATH</p>
+</div><span id='variant.Standalone' class='variant'><span id='Standalone.v' class='invisible'><code>Standalone</code></span></span><div class='docblock'><p>-s --standalone</p>
+</div><span id='variant.Template' class='variant'><span id='Template.v' class='invisible'><code>Template(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>)</code></span></span><div class='docblock'><p>--template=FILENAME</p>
+</div><span id='variant.Meta' class='variant'><span id='Meta.v' class='invisible'><code>Meta(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>,&nbsp;<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>&gt;)</code></span></span><div class='docblock'><p>-M KEY[:VALUE] --metadata=KEY[:VALUE]</p>
+</div><span id='variant.Var' class='variant'><span id='Var.v' class='invisible'><code>Var(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>,&nbsp;<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>&gt;)</code></span></span><div class='docblock'><p>-V KEY[:VALUE] --variable=KEY[:VALUE]</p>
+</div><span id='variant.PrintDefaultTemplate' class='variant'><span id='PrintDefaultTemplate.v' class='invisible'><code>PrintDefaultTemplate(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>)</code></span></span><div class='docblock'><p>-D FORMAT --print-default-template=FORMAT</p>
+</div><span id='variant.PrintDefaultDataFile' class='variant'><span id='PrintDefaultDataFile.v' class='invisible'><code>PrintDefaultDataFile(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>)</code></span></span><div class='docblock'><p>--print-default-data-file=FILE</p>
+</div><span id='variant.NoWrap' class='variant'><span id='NoWrap.v' class='invisible'><code>NoWrap</code></span></span><div class='docblock'><p>--no-wrap</p>
+</div><span id='variant.Columns' class='variant'><span id='Columns.v' class='invisible'><code>Columns(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>)</code></span></span><div class='docblock'><p>--columns=NUMBER</p>
+</div><span id='variant.TableOfContents' class='variant'><span id='TableOfContents.v' class='invisible'><code>TableOfContents</code></span></span><div class='docblock'><p>--toc, --table-of-contents</p>
+</div><span id='variant.TableOfContentsDepth' class='variant'><span id='TableOfContentsDepth.v' class='invisible'><code>TableOfContentsDepth(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>)</code></span></span><div class='docblock'><p>--toc-depth=NUMBER</p>
+</div><span id='variant.NoHighlight' class='variant'><span id='NoHighlight.v' class='invisible'><code>NoHighlight</code></span></span><div class='docblock'><p>--no-highlight</p>
+</div><span id='variant.HighlightStyle' class='variant'><span id='HighlightStyle.v' class='invisible'><code>HighlightStyle(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>)</code></span></span><div class='docblock'><p>--highlight-style=STYLE</p>
+</div><span id='variant.IncludeInHeader' class='variant'><span id='IncludeInHeader.v' class='invisible'><code>IncludeInHeader(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>)</code></span></span><div class='docblock'><p>-H FILENAME --include-in-header=FILENAME</p>
+</div><span id='variant.IncludeBeforeBody' class='variant'><span id='IncludeBeforeBody.v' class='invisible'><code>IncludeBeforeBody(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>)</code></span></span><div class='docblock'><p>-B FILENAME --include-before-body=FILENAME</p>
+</div><span id='variant.IncludeAfterBody' class='variant'><span id='IncludeAfterBody.v' class='invisible'><code>IncludeAfterBody(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>)</code></span></span><div class='docblock'><p>-A FILENAME --include-after-body=FILENAME</p>
+</div><span id='variant.SelfContained' class='variant'><span id='SelfContained.v' class='invisible'><code>SelfContained</code></span></span><div class='docblock'><p>--self-contained</p>
+</div><span id='variant.Offline' class='variant'><span id='Offline.v' class='invisible'><code>Offline</code></span></span><div class='docblock'><p>--offline</p>
+</div><span id='variant.Html5' class='variant'><span id='Html5.v' class='invisible'><code>Html5</code></span></span><div class='docblock'><p>-5 --html5</p>
+</div><span id='variant.HtmlQTags' class='variant'><span id='HtmlQTags.v' class='invisible'><code>HtmlQTags</code></span></span><div class='docblock'><p>--html-q-tags</p>
+</div><span id='variant.Ascii' class='variant'><span id='Ascii.v' class='invisible'><code>Ascii</code></span></span><div class='docblock'><p>--ascii</p>
+</div><span id='variant.ReferenceLinks' class='variant'><span id='ReferenceLinks.v' class='invisible'><code>ReferenceLinks</code></span></span><div class='docblock'><p>--reference-links</p>
+</div><span id='variant.AtxHeaders' class='variant'><span id='AtxHeaders.v' class='invisible'><code>AtxHeaders</code></span></span><div class='docblock'><p>--atx-headers</p>
+</div><span id='variant.TopLevelDivision' class='variant'><span id='TopLevelDivision.v' class='invisible'><code>TopLevelDivision(<a class="enum" href="../pandoc/enum.Tld.html" title="enum pandoc::Tld">Tld</a>)</code></span></span><div class='docblock'><p>--top-level-division=</p>
+</div><span id='variant.NumberSections' class='variant'><span id='NumberSections.v' class='invisible'><code>NumberSections</code></span></span><div class='docblock'><p>-N --number-sections</p>
+</div><span id='variant.NumberOffset' class='variant'><span id='NumberOffset.v' class='invisible'><code>NumberOffset(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html" title="struct collections::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>&gt;)</code></span></span><div class='docblock'><p>--number-offset=NUMBERS</p>
+</div><span id='variant.NoTexLigatures' class='variant'><span id='NoTexLigatures.v' class='invisible'><code>NoTexLigatures</code></span></span><div class='docblock'><p>--no-tex-ligatures</p>
+</div><span id='variant.Listings' class='variant'><span id='Listings.v' class='invisible'><code>Listings</code></span></span><div class='docblock'><p>--listings</p>
+</div><span id='variant.Incremental' class='variant'><span id='Incremental.v' class='invisible'><code>Incremental</code></span></span><div class='docblock'><p>-i --incremental</p>
+</div><span id='variant.SlideLevel' class='variant'><span id='SlideLevel.v' class='invisible'><code>SlideLevel(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>)</code></span></span><div class='docblock'><p>--slide-level=NUMBER</p>
+</div><span id='variant.SectionDivs' class='variant'><span id='SectionDivs.v' class='invisible'><code>SectionDivs</code></span></span><div class='docblock'><p>--section-divs</p>
+</div><span id='variant.DefaultImageExtension' class='variant'><span id='DefaultImageExtension.v' class='invisible'><code>DefaultImageExtension(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>)</code></span></span><div class='docblock'><p>--default-image-extension=extension</p>
+</div><span id='variant.EmailObfuscation' class='variant'><span id='EmailObfuscation.v' class='invisible'><code>EmailObfuscation(<a class="enum" href="../pandoc/enum.EmailObfuscation.html" title="enum pandoc::EmailObfuscation">EmailObfuscation</a>)</code></span></span><div class='docblock'><p>--email-obfuscation=none|javascript|references</p>
+</div><span id='variant.IdPrefix' class='variant'><span id='IdPrefix.v' class='invisible'><code>IdPrefix(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>)</code></span></span><div class='docblock'><p>--id-prefix=STRING</p>
+</div><span id='variant.TitlePrefix' class='variant'><span id='TitlePrefix.v' class='invisible'><code>TitlePrefix(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>)</code></span></span><div class='docblock'><p>-T STRING --title-prefix=STRING</p>
+</div><span id='variant.Css' class='variant'><span id='Css.v' class='invisible'><code>Css(<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>)</code></span></span><div class='docblock'><p>-c URL --css=URL</p>
+</div><span id='variant.ReferenceOdt' class='variant'><span id='ReferenceOdt.v' class='invisible'><code>ReferenceOdt(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>)</code></span></span><div class='docblock'><p>--reference-odt=FILENAME</p>
+</div><span id='variant.ReferenceDocx' class='variant'><span id='ReferenceDocx.v' class='invisible'><code>ReferenceDocx(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>)</code></span></span><div class='docblock'><p>--reference-docx=FILENAME</p>
+</div><span id='variant.EpubStylesheet' class='variant'><span id='EpubStylesheet.v' class='invisible'><code>EpubStylesheet(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>)</code></span></span><div class='docblock'><p>--epub-stylesheet=FILENAME</p>
+</div><span id='variant.EpubCoverImage' class='variant'><span id='EpubCoverImage.v' class='invisible'><code>EpubCoverImage(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>)</code></span></span><div class='docblock'><p>--epub-cover-image=FILENAME</p>
+</div><span id='variant.EpubMetadata' class='variant'><span id='EpubMetadata.v' class='invisible'><code>EpubMetadata(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>)</code></span></span><div class='docblock'><p>--epub-metadata=FILENAME</p>
+</div><span id='variant.EpubEmbedFont' class='variant'><span id='EpubEmbedFont.v' class='invisible'><code>EpubEmbedFont(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>)</code></span></span><div class='docblock'><p>--epub-embed-font=FILE</p>
+</div><span id='variant.EpubChapterLevel' class='variant'><span id='EpubChapterLevel.v' class='invisible'><code>EpubChapterLevel(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>)</code></span></span><div class='docblock'><p>--epub-chapter-level=NUMBER</p>
+</div><span id='variant.LatexEngine' class='variant'><span id='LatexEngine.v' class='invisible'><code>LatexEngine(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>)</code></span></span><div class='docblock'><p>--latex-engine=PROGRAM</p>
+</div><span id='variant.LatexEngineOpt' class='variant'><span id='LatexEngineOpt.v' class='invisible'><code>LatexEngineOpt(<a class="struct" href="https://doc.rust-lang.org/nightly/collections/string/struct.String.html" title="struct collections::string::String">String</a>)</code></span></span><div class='docblock'><p>--latex-engine-opt=STRING</p>
+</div><span id='variant.Bibliography' class='variant'><span id='Bibliography.v' class='invisible'><code>Bibliography(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>)</code></span></span><div class='docblock'><p>--bibliography=FILE</p>
+</div><span id='variant.Csl' class='variant'><span id='Csl.v' class='invisible'><code>Csl(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>)</code></span></span><div class='docblock'><p>--csl=FILE</p>
+</div><span id='variant.CitationAbbreviations' class='variant'><span id='CitationAbbreviations.v' class='invisible'><code>CitationAbbreviations(<a class="struct" href="https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html" title="struct std::path::PathBuf">PathBuf</a>)</code></span></span><div class='docblock'><p>--citation-abbreviations=FILE</p>
+</div><span id='variant.Natbib' class='variant'><span id='Natbib.v' class='invisible'><code>Natbib</code></span></span><div class='docblock'><p>--natbib</p>
+</div><span id='variant.Biblatex' class='variant'><span id='Biblatex.v' class='invisible'><code>Biblatex</code></span></span><div class='docblock'><p>--biblatex</p>
+</div><span id='variant.LatexMathML' class='variant'><span id='LatexMathML.v' class='invisible'><code>LatexMathML(<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>&gt;)</code></span></span><div class='docblock'><p>-m[URL] --latexmathml[=URL], --asciimathml[=URL]</p>
+</div><span id='variant.AsciiMathML' class='variant'><span id='AsciiMathML.v' class='invisible'><code>AsciiMathML(<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>&gt;)</code></span></span><div class='docblock'><p>--asciimathml[=URL]</p>
+</div><span id='variant.MathML' class='variant'><span id='MathML.v' class='invisible'><code>MathML(<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>&gt;)</code></span></span><div class='docblock'><p>--mathml[=URL]</p>
+</div><span id='variant.MimeTex' class='variant'><span id='MimeTex.v' class='invisible'><code>MimeTex(<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>&gt;)</code></span></span><div class='docblock'><p>--mimetex[=URL]</p>
+</div><span id='variant.WebTex' class='variant'><span id='WebTex.v' class='invisible'><code>WebTex(<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>&gt;)</code></span></span><div class='docblock'><p>--webtex[=URL]</p>
+</div><span id='variant.JsMath' class='variant'><span id='JsMath.v' class='invisible'><code>JsMath(<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>&gt;)</code></span></span><div class='docblock'><p>--jsmath[=URL]</p>
+</div><span id='variant.MathJax' class='variant'><span id='MathJax.v' class='invisible'><code>MathJax(<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>&gt;)</code></span></span><div class='docblock'><p>--mathjax[=URL]</p>
+</div><span id='variant.Katex' class='variant'><span id='Katex.v' class='invisible'><code>Katex(<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>&gt;)</code></span></span><div class='docblock'><p>--katex[=URL]</p>
+</div><span id='variant.KatexStylesheet' class='variant'><span id='KatexStylesheet.v' class='invisible'><code>KatexStylesheet(<a class="type" href="../pandoc/type.URL.html" title="type pandoc::URL">URL</a>)</code></span></span><div class='docblock'><p>--katex-stylesheet=URL</p>
+</div><span id='variant.GladTex' class='variant'><span id='GladTex.v' class='invisible'><code>GladTex</code></span></span><div class='docblock'><p>-gladtex</p>
+</div><span id='variant.Trace' class='variant'><span id='Trace.v' class='invisible'><code>Trace</code></span></span><div class='docblock'><p>--trace</p>
+</div><span id='variant.DumpArgs' class='variant'><span id='DumpArgs.v' class='invisible'><code>DumpArgs</code></span></span><div class='docblock'><p>--dump-args</p>
+</div><span id='variant.IgnoreArgs' class='variant'><span id='IgnoreArgs.v' class='invisible'><code>IgnoreArgs</code></span></span><div class='docblock'><p>--ignore-args</p>
+</div><span id='variant.Verbose' class='variant'><span id='Verbose.v' class='invisible'><code>Verbose</code></span></span><div class='docblock'><p>--verbose</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a> for <a class="enum" href="../pandoc/enum.PandocOption.html" title="enum pandoc::PandocOption">PandocOption</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/pandoc/lib.rs.html#81' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class="method"><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class="enum" href="../pandoc/enum.PandocOption.html" title="enum pandoc::PandocOption">PandocOption</a></code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class="method"><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html" title="trait core::fmt::Debug">Debug</a> for <a class="enum" href="../pandoc/enum.PandocOption.html" title="enum pandoc::PandocOption">PandocOption</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/pandoc/lib.rs.html#81' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class="method"><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html" title="type core::fmt::Result">Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "pandoc";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
